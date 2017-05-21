@@ -1,0 +1,11 @@
+<article>
+	<h1> USA Holidays</h1>
+	
+	<div *ngFor="let details of holidayList">
+		<a routerLink="/holiday-details" routerLinkActive="active" (click)="redirectDetails(details)">
+			<span>{{details.name}}</span>
+			<span>{{details.date}}</span>		
+		</a>
+	
+	</div>
+</article>
