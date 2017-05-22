@@ -1,24 +1,48 @@
-<div>
-	<div>
-		<label for="name">Holiday Name: </label>	
-		<span id="name">{{holidayDetails.name}}</span>
-	</div>
-	<div>
-		<label for="date">Holiday Date: </label>	
-		<span id="date">{{holidayDetails.date}}</span>
-	</div>
-	<div>
-		<label for="observed">Holiday Observed: </label>	
-		<span id="observed">{{holidayDetails.observed}}</span>
-	</div>
-	<div>
-		<label for="isPublic">Public Holiday: </label>	
-		<span id="" *ngIf = "!holidayDetails.isPublic">
-				Yay Its Public Holiday!!	
-		</span>
-		<span id="" *ngIf = "holidayDetails.isPublic">
-				Am not public holiday	
-		</span>
-	</div>		
-	
-</div>
+<article>
+	<table>
+  		<thead>
+    		<tr>
+      			<th>
+      				<h1>
+      					<strong>
+      						Holiday Details
+      					</strong>
+      				</h1>
+      			</th>
+    		</tr>
+  		</thead>
+  	<tbody>
+    	<tr>
+      		<td>
+      			<strong>
+      				<label for="name">Holiday Name: </label>
+      			</strong>      		
+				<span id="name">{{holidayDetails.name}}</span>
+      		</td>
+    	</tr>
+    	<tr>
+      		<td>
+      			<strong>
+      				<label for="date">Holiday Date: </label>	
+					<span id="date">{{holidayDetails.date}}</span>
+				</strong>
+			</td>
+    	</tr>
+    	<tr>
+      		<td>
+      			<strong>
+      				<label for="observed">Holiday Observed: </label>	
+					<span id="observed">{{holidayDetails.observed}}</span>
+				</strong>
+			</td>
+    	</tr>
+    	<tr>
+      		<td>
+      			<strong>	
+      				<label for="isPublic">Public Holiday: </label>	
+					<span id="" *ngIf = "!holidayDetails.isPublic">Yay Its Public Holiday!!</span>
+					<span id="" *ngIf = "holidayDetails.isPublic">Am not public holiday</span></strong></td>
+    	</tr>
+  	</tbody>
+ </table>
+</article>

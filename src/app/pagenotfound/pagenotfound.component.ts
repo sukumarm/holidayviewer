@@ -10,10 +10,10 @@ export class PagenotfoundComponent implements OnInit {
    fullImagePath: string;
   constructor() { }
 
-  ngOnInit() {
+      ngOnInit() {
 
-    this.fullImagePath = '/assets/images/pageError.jpg';
-}
+        this.fullImagePath = '/assets/images/pageError.jpg';
+    }
   }
 
 

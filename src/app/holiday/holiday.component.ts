@@ -29,7 +29,6 @@ export class HolidayComponent implements OnInit {
     this.holidayService.retrieveHolidayData().subscribe(data =>  {
          this.holidayData = data.holidays;
          this.getFilteredValues(this.holidayData);
-         console.log(this.holidayData);
          return true;
     },
      error =>  {

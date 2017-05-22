@@ -1,11 +1,23 @@
 <article>
-	<h1> USA Holidays</h1>
-	
-	<div *ngFor="let details of holidayList">
-		<a routerLink="/holiday-details" routerLinkActive="active" (click)="redirectDetails(details)">
-			<span>{{details.name}}</span>
-			<span>{{details.date}}</span>		
-		</a>
-	
-	</div>
+	<h1>
+		<strong>USA Holidays</strong> 
+	</h1>
+	<table>
+  		<thead>
+    		<tr>
+      			<th>Date</th>
+      			<th>Holiday</th>
+    		</tr>
+  	</thead>
+  	<tbody *ngFor="let details of holidayList">
+    	<tr>
+      		<td>
+      			<strong>{{details.date}}</strong>
+      		</td>
+      		<td>
+      			<a routerLink="/holiday-details" routerLinkActive="active" (click)="redirectDetails(details)" >{{details.name}}</a>
+      		</td>
+    	</tr>
+  	</tbody>
+</table>
 </article>
