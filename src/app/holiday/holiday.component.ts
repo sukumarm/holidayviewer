@@ -24,7 +24,7 @@ export class HolidayComponent implements OnInit {
 
   redirectDetails(details: Holiday): void {
     this.holidayDetailService.holiday = details;
-
+    localStorage.setItem("holidayDetails", JSON.stringify(this.holidayDetailService.holiday));
   }
 
 
