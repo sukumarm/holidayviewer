@@ -1,19 +1,22 @@
 import { Holiday } from '../holiday';
 import { HolidayDetailService } from '../holiday-details/holiday-detail.service';
+import { UtilityService } from '../utility.service';
 import { HolidayService } from './holiday.service';
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-holiday',
   templateUrl: './holiday.component.html',
   styleUrls: ['./holiday.component.css'],
-  providers: [HolidayService]
+  providers: [HolidayService, UtilityService]
 })
 export class HolidayComponent implements OnInit {
 
-  constructor( private holidayDetailService: HolidayDetailService, private holidayService: HolidayService) { }
+  constructor( private holidayDetailService: HolidayDetailService, 
+               private holidayService: HolidayService,
+               private router: Router) { }
 
   holidayList: Array<Holiday> = [];
   holidayData: any;
@@ -32,6 +35,7 @@ export class HolidayComponent implements OnInit {
          return true;
     },
      error =>  {
+          this.router.navigate(['app-pagenotfound']);
           console.error('Error Retrieving Data');
           return Observable.throw(error);
      });
