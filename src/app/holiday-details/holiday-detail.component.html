@@ -3,11 +3,9 @@
   		<thead>
     		<tr>
       			<th>
-      				<h1>
-      					<strong>
-      						Holiday Details
-      					</strong>
-      				</h1>
+      				<md-toolbar color="primary">
+    					<span>Holiday Details</span>
+    				</md-toolbar>
       			</th>
     		</tr>
   		</thead>
@@ -40,8 +38,8 @@
       		<td>
       			<strong>	
       				<label for="isPublic">Public Holiday: </label>	
-					<span id="" *ngIf = "!holidayDetails.isPublic">Yay Its Public Holiday!!</span>
-					<span id="" *ngIf = "holidayDetails.isPublic">Am not public holiday</span></strong></td>
+					<span id="" *ngIf = "holidayDetails.public">Yay Its Public Holiday!!</span>
+					<span id="" *ngIf = "!holidayDetails.public">Am not public holiday</span></strong></td>
     	</tr>
   	</tbody>
  </table>

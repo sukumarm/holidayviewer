@@ -23,12 +23,12 @@ export class HolidayDetailComponent implements OnInit {
       ngOnInit() {
 
           const retrievedObject = JSON.parse(localStorage.getItem('holidayDetails'));
-          if (!this.utilityService.isVerifyData(retrievedObject)){
+          if (!this.utilityService.isVerifyData(retrievedObject)) {
             this.holidayDetails = retrievedObject;
           }
     }
-          
-    
+
+
   }
 
 
