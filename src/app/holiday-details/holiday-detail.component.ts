@@ -6,7 +6,6 @@ import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 
 
-
 @Component({
   selector: 'app-holiday-detail',
   templateUrl: './holiday-detail.component.html',
@@ -16,13 +15,14 @@ import { Router } from '@angular/router';
 export class HolidayDetailComponent implements OnInit {
 
   public holidayDetails: Holiday;
-  constructor(private router: Router, private utilityService:UtilityService) {
+  constructor(private router: Router, private utilityService:UtilityService,
+               private holidayService: HolidayDetailService) {
 
   }
 
       ngOnInit() {
 
-          const retrievedObject = JSON.parse(localStorage.getItem('holidayDetails'));
+          const retrievedObject = this.holidayService.holiday;
           if (!this.utilityService.isVerifyData(retrievedObject)) {
             this.holidayDetails = retrievedObject;
           }

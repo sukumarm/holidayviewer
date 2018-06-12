@@ -1,8 +1,8 @@
 <article>
-	<md-toolbar color="primary">
+
     	<span>Holiday Viewer</span>
-    
-	</md-toolbar>
+
+
 	<table>
   		<thead>
     		<tr>
@@ -16,10 +16,9 @@
       			<strong>{{details.date}}</strong>
       		</td>
       		<td>
-      		<md-chip>
-      			<a class="MdButtonBase" routerLink="/holiday-details" routerLinkActive="active" (click)="redirectDetails(details)" target="_blank">{{details.name}}</a>
-      		</md-chip>
-      			
+
+      			<a  routerLink="/holiday-details" routerLinkActive="active" (click)="redirectDetails(details)" >{{details.name}}</a>
+
       		</td>
     	</tr>
   	</tbody>

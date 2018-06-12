@@ -3,9 +3,8 @@
   		<thead>
     		<tr>
       			<th>
-      				<md-toolbar color="primary">
     					<span>Holiday Details</span>
-    				</md-toolbar>
+
       			</th>
     		</tr>
   		</thead>
@@ -14,14 +13,14 @@
       		<td>
       			<strong>
       				<label for="name">Holiday Name: </label>
-      			</strong>      		
+      			</strong>
 				<span id="name">{{holidayDetails.name}}</span>
       		</td>
     	</tr>
     	<tr>
       		<td>
       			<strong>
-      				<label for="date">Holiday Date: </label>	
+      				<label for="date">Holiday Date: </label>
 					<span id="date">{{holidayDetails.date}}</span>
 				</strong>
 			</td>
@@ -29,17 +28,17 @@
     	<tr>
       		<td>
       			<strong>
-      				<label for="observed">Holiday Observed: </label>	
+      				<label for="observed">Holiday Observed: </label>
 					<span id="observed">{{holidayDetails.observed}}</span>
 				</strong>
 			</td>
     	</tr>
     	<tr>
       		<td>
-      			<strong>	
-      				<label for="isPublic">Public Holiday: </label>	
-					<span id="" *ngIf = "holidayDetails.public">Yay Its Public Holiday!!</span>
-					<span id="" *ngIf = "!holidayDetails.public">Am not public holiday</span></strong></td>
+      			<strong>
+      				<label for="isPublic">Public Holiday: </label>
+					<span *ngIf = "holidayDetails.public">Yay Its Public Holiday!!</span>
+					<span  *ngIf = "!holidayDetails.public">Am not public holiday</span></strong></td>
     	</tr>
   	</tbody>
  </table>

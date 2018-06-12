@@ -1,6 +1,4 @@
 
-import { Holiday } from './holiday';
-import { HolidayDetailService } from './holiday-details/holiday-detail.service';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -13,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'US-Holidays-Viewer';
   ngOnInit(): void {
-
+      console.log('I am app component');
     }
 
 }
+

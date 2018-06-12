@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MaterialModule, MdButton} from '@angular/material';
 import 'hammerjs';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -25,7 +24,9 @@ const appRoutes: Routes = [
     redirectTo: '/usholiday',
     pathMatch: 'full'
   },
+   { path: 'error', redirectTo: '/usholiday'},
   { path: '**', component: PagenotfoundComponent }
+
 ];
 
 @NgModule({
@@ -40,7 +41,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
+
     RouterModule.forRoot(appRoutes),
   ],
   providers: [HolidayDetailService],
